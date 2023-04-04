@@ -3,11 +3,7 @@
 "use strict";
 
 /**
- *    @author Ericson Weah Dev  
- *    email: ericson.weah@ericsonweah.dev
- *    github: https://github.com/ericson-weah-dev
- *    phone: +1.385.204.5167
- *    Website: https://www.ericsonweah.dev
+ * @author Ericson S. Weah  <ericson.weah@gmail.com> <https://github.com/eweah>  <+1.385.204.5167>
  *
  * @module CLI
  * @kind class
@@ -19,7 +15,7 @@
  */
 
 
-class CLI extends require("@zerodependency/base") {
+class CLI extends require("./") {
 
   constructor(...arrayOfObjects) {
 
