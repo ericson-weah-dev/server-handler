@@ -19,7 +19,7 @@
  */
 
 
-class CLI extends require("@zerodependency/base") {
+class CLI extends require("./module/base") {
 
   constructor(...arrayOfObjects) {
 

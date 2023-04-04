@@ -27,10 +27,5 @@
   "bugs": {
     "url": "https://github.com/ericson-weah-dev/server-handler/issues"
   },
-  "homepage": "https://github.com/ericson-weah-dev/server-handler#readme",
-  "dependencies": {
-    "@zerodependency/base": "./modules/base",
-    "@zerodependency/content-type": "./modules/content-type",
-    "@zerodependency/response": "./modules/response"
-  }
+  "homepage": "https://github.com/ericson-weah-dev/server-handler#readme"
 }

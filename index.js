@@ -21,11 +21,10 @@
 const url = require('url');
 const StringDecoder = require('string_decoder').StringDecoder;
 
-
 // const debug = debuglog('server')
-const Response = require('@zerodependency/response')
+const Response = require('./modules/response')
 
-const ContentType = require('@zerodependency/content-type');
+const ContentType = require('./modules/content-type');
 
 class Handler extends require('./base') {
 
