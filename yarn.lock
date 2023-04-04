@@ -2,11 +2,3 @@
 # yarn lockfile v1
 
 
-"@zerodependency/base@./modules/base":
-  version "0.0.0"
-
-"@zerodependency/content-type@./modules/content-type":
-  version "0.0.0"
-
-"@zerodependency/response@./modules/response":
-  version "0.0.0"
