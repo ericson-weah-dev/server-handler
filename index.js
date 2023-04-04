@@ -23,24 +23,31 @@ const StringDecoder = require('string_decoder').StringDecoder;
 
 
 // const debug = debuglog('server')
-const Response = require('./Response')
+const Response = require('@zerodependency/response')
 
-const ContentType = require('./ContentType');
+const ContentType = require('@zerodependency/content-type');
 
 class Handler extends require('./base') {
 
-    constructor(options = {}) {
+    constructor(...arrayOfObjects) {
 
-        super({ objectMode: true, encoding: 'utf-8', autoDestroy: true })
-
-        Object.keys(options).forEach(key => { this[key] = options[key] })
-
+        super({ objectMode: true, encoding: "utf-8", autoDestroy: true });
+    
+        arrayOfObjects.forEach(option => {
+            if(Object.keys(option).length > 0){
+               Object.keys(option).forEach((key) => { if(!this[key]) this[key] = option[key];})
+            }
+        });
+    
         // auto bind methods
-        this.autobind(Handler)
-            //Set maximum number of listeners to infinity
-        this.setMaxListeners(Infinity)
-
-    }
+        this.autobind(Base);
+        // auto invoke methods
+        this.autoinvoker(Base);
+        // add other classes method if methods do not already exist. Argument order matters!
+        // this.methodizer(..classList);
+        //Set the maximum number of listeners to infinity
+        this.setMaxListeners(Infinity);
+      }
 
 
     /**
